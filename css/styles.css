@@ -131,3 +131,39 @@ footer {
   color: #f0ad4e;
   text-decoration: none;
 }
+
+/* 요금제 비교 표 */
+#pricing-comparison table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+}
+#pricing-comparison th, #pricing-comparison td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+}
+#pricing-comparison th {
+  background: #007bff;
+  color: white;
+}
+#pricing-comparison td:first-child {
+  font-weight: bold;
+  background: #f9f9f9;
+}
+
+/* 커스텀 요금제 */
+#custom-pricing {
+  background: #f4f4f4;
+  padding: 20px;
+  text-align: center;
+}
+#custom-pricing label {
+  display: block;
+  margin: 10px 0;
+}
+#total-price {
+  font-size: 1.5em;
+  color: #007bff;
+  font-weight: bold;
+}
