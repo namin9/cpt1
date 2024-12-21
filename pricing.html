@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>가격안내 - My Service</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
   <header class="header">
@@ -20,17 +20,91 @@
           <li><a href="contact.html">문의하기</a></li>
           <li><a href="about.html">소개자료</a></li>
           <li><a href="faq.html">FAQ</a></li>
-          <li><a href="https://external-login-service.com" target="_blank">로그인</a></li>
+          <li><a href="https://xn--9i1b75k0tai37d.xn--h32bi4v.xn--3e0b707e/login" target="_blank">로그인</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
   <main>
-    <section>
-      <h1>가격안내</h1>
-      <p>무료 및 유료 플랜을 확인하세요.</p>
+    <!-- 요금제 비교 섹션 -->
+    <section id="pricing-comparison">
+      <h1>요금제 비교</h1>
+      <table>
+        <thead>
+          <tr>
+            <th>기능</th>
+            <th>베이직</th>
+            <th>프리미엄</th>
+            <th>커스텀</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>모니터링</td>
+            <td>✔</td>
+            <td>✔</td>
+            <td>선택 가능</td>
+          </tr>
+          <tr>
+            <td>노출 확인</td>
+            <td>✔</td>
+            <td>✔</td>
+            <td>선택 가능</td>
+          </tr>
+          <tr>
+            <td>알림</td>
+            <td>이메일</td>
+            <td>이메일, SMS</td>
+            <td>선택 가능</td>
+          </tr>
+          <tr>
+            <td>키워드 보고서</td>
+            <td>월간</td>
+            <td>주간</td>
+            <td>선택 가능</td>
+          </tr>
+          <tr>
+            <td>언론 보고서</td>
+            <td>-</td>
+            <td>✔</td>
+            <td>선택 가능</td>
+          </tr>
+          <tr>
+            <td>데이터 분석</td>
+            <td>-</td>
+            <td>✔</td>
+            <td>선택 가능</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- 커스텀 요금제 섹션 -->
+    <section id="custom-pricing">
+      <h2>커스텀 요금제</h2>
+      <p>필요한 기능만 선택하여 맞춤형 요금제를 구성해 보세요.</p>
+      <form id="custom-form">
+        <label>
+          <input type="checkbox" class="feature-checkbox" data-price="150000">
+          모니터링
+        </label>
+        <label>
+          <input type="checkbox" class="feature-checkbox" data-price="100000">
+          알림
+        </label>
+        <label>
+          <input type="checkbox" class="feature-checkbox" data-price="800000">
+          월간 보고서
+        </label>
+        <label>
+          <input type="checkbox" class="feature-checkbox" data-price="500000">
+          데이터 분석
+        </label>
+        <p><strong>예상 총 요금: </strong><span id="total-price">0</span>원</p>
+      </form>
     </section>
   </main>
 </body>
+<script src="js/price.js"></script>
 </html>
