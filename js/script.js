@@ -39,4 +39,11 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   }
   
   window.addEventListener('scroll', updateActiveNav);
-  
+
+// FAQ Toggle
+document.querySelectorAll('.faq-item h3').forEach(faq => {
+  faq.addEventListener('click', () => {
+    const answer = faq.nextElementSibling;
+    answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
+  });
+});
