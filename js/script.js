@@ -64,3 +64,25 @@ document.getElementById('contact-form').addEventListener('submit', function (e) 
   alert('문의가 성공적으로 제출되었습니다. 곧 답변드리겠습니다.');
   this.reset(); // 폼 초기화
 });
+document.getElementById('contact-form').addEventListener('submit', function(event) {
+  event.preventDefault();
+
+  const serviceID = 'service_rn2k6xe';
+  const templateID = 'template_xxx';
+
+  emailjs.sendForm(serviceID, templateID, this)
+    .then(() => {
+      // 팝업 표시
+      const popup = document.getElementById('success-popup');
+      popup.style.display = 'flex'; // 팝업 보이기
+      this.reset(); // 폼 초기화
+    }, (err) => {
+      alert('이메일 전송 중 오류가 발생했습니다.\n' + JSON.stringify(err));
+    });
+});
+
+// 팝업 닫기 기능
+document.getElementById('close-popup').addEventListener('click', function() {
+  const popup = document.getElementById('success-popup');
+  popup.style.display = 'none'; // 팝업 숨기기
+});
