@@ -3,57 +3,22 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>404 - 페이지를 찾을 수 없습니다</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      text-align: center;
-      background-color: #f4f4f4;
-      color: #333;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
+  <title>Redirecting...</title>
+  <script>
+    const hash = window.location.hash;
+
+    if (hash) {
+      // 해시가 있는 경우: Contact 페이지로 리다이렉트
+      const contactUrl = '/contact.html' + hash;
+      window.location.href = contactUrl;
+    } else {
+      // 해시가 없는 경우: Index 페이지로 리다이렉트
+      const indexUrl = '/index.html';
+      window.location.href = indexUrl;
     }
-    .container {
-      max-width: 600px;
-      padding: 20px;
-    }
-    h1 {
-      font-size: 3rem;
-      margin-bottom: 20px;
-    }
-    p {
-      font-size: 1.2rem;
-      margin-bottom: 20px;
-    }
-    a {
-      display: inline-block;
-      margin-top: 20px;
-      padding: 10px 20px;
-      background: #007bff;
-      color: white;
-      text-decoration: none;
-      border-radius: 5px;
-      transition: background-color 0.3s ease;
-    }
-    a:hover {
-      background: #0056b3;
-    }
-  </style>
+  </script>
 </head>
 <body>
-  <div class="container">
-    <h1>404</h1>
-    <p>죄송합니다, 요청하신 페이지를 찾을 수 없습니다.</p>
-    <a href="index">홈으로 돌아가기</a>
-  </div>
+  <p>페이지를 로드 중입니다. 잠시만 기다려 주세요...</p>
 </body>
-  <script>
-  setTimeout(() => {
-    window.location.href = 'index';
-  }, 5000); // 5초 후 홈으로 이동
-  </script>
 </html>
