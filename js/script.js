@@ -47,3 +47,20 @@ document.querySelectorAll('.faq-item h3').forEach(faq => {
     answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
   });
 });
+
+
+document.getElementById('contact-form').addEventListener('submit', function (e) {
+  e.preventDefault();
+
+  const name = document.getElementById('name').value.trim();
+  const email = document.getElementById('email').value.trim();
+  const message = document.getElementById('message').value.trim();
+
+  if (!name || !email || !message) {
+    alert('모든 필드를 작성해주세요.');
+    return;
+  }
+
+  alert('문의가 성공적으로 제출되었습니다. 곧 답변드리겠습니다.');
+  this.reset(); // 폼 초기화
+});
