@@ -1,9 +1,22 @@
 /* 기본 스타일 */
 body {
   font-family: Arial, sans-serif;
+  font-size: 16px;
   margin: 0;
   padding: 0;
   line-height: 1.6;
+}
+h1, h2, h3 {
+  line-height: 1.4;
+}
+h1 {
+  font-size: 2.5rem;
+}
+h2 {
+  font-size: 2rem;
+}
+section {
+  padding: 80px 20px; /* 위아래 여백 */
 }
 
 /* 헤더 */
@@ -37,20 +50,27 @@ body {
 }
 /* 히어로 섹션 */
 #hero {
-  background: url('assets/hero-bg.jpg') no-repeat center center/cover;
+  background: linear-gradient(135deg, #007bff, #0056b3);
   color: white;
   text-align: center;
   padding: 150px 20px;
 }
+#features {
+  background: #f8f9fa;
+  color: #333;
+}
 #hero .btn-primary {
-  background-color: #f0ad4e;
+  background-color: #007bff;
   color: white;
-  padding: 10px 20px;
+  padding: 15px 25px;
   border-radius: 5px;
-  text-decoration: none;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
 }
 #hero .btn-primary:hover {
-  background-color: #ec971f;
+  background-color: #0056b3;
+  transform: scale(1.05);
 }
 
 /* 주요 기능 */
@@ -59,9 +79,10 @@ body {
   text-align: center;
 }
 .feature-cards {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 20px;
-  justify-content: center;
+  padding: 20px;
 }
 .card {
   background: white;
@@ -71,7 +92,15 @@ body {
   width: 200px;
   text-align: center;
 }
-
+@media (max-width: 768px) {
+  .feature-cards {
+    grid-template-columns: 1fr; /* 카드 한 줄로 */
+  }
+  .nav-list {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
 /* FAQ */
 #faq {
   padding: 50px 20px;
