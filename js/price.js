@@ -31,7 +31,7 @@ inquiryButton.addEventListener('click', () => {
   }
 
   // 문의 페이지 URL 생성
-  const inquiryUrl = new URL('contact', window.location.origin);
+  const inquiryUrl = new URL('contact.html', window.location.origin);
   inquiryUrl.searchParams.set('features', selectedFeatures.join(', '));
   inquiryUrl.searchParams.set('totalPrice', totalPrice);
 
