@@ -352,7 +352,6 @@ button:hover {
   list-style: none;
   display: flex;
   margin: 0;
-  padding: 0;
 }
 
 .nav-list li a {
@@ -412,7 +411,6 @@ button:hover {
   .hamburger {
     display: flex; /* 햄버거 버튼 활성화 */
     position: absolute;
-    right: 20px;
-    top: 20px;
+    right: 40px;
   }
 }
