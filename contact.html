@@ -98,28 +98,11 @@
   </footer>
 
   <script>
-    // EmailJS를 사용한 이메일 전송 처리
-    document.getElementById('contact-form').addEventListener('submit', function(event) {
-      event.preventDefault();
-
-      const serviceID = 'service_rn2k6xe';
-      const templateID = 'template_d7emzdg';
-
-      emailjs.sendForm(serviceID, templateID, this)
-        .then(() => {
-          document.getElementById('success-message').style.display = 'block';
-          this.reset();
-        }, (err) => {
-          alert('이메일 전송 중 오류가 발생했습니다.\n' + JSON.stringify(err));
-        });
-    });
-  </script>
-  <script>
     document.getElementById('contact-form').addEventListener('submit', function(event) {
       event.preventDefault();
     
       const serviceID = 'service_rn2k6xe';
-      const templateID = 'template_xxx';
+      const templateID = 'template_d7emzdg';
     
       emailjs.sendForm(serviceID, templateID, this)
         .then(() => {
