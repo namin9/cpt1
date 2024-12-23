@@ -23,18 +23,14 @@ checkboxes.forEach((checkbox) => {
   });
 });
 
-// 도입 문의 버튼 클릭 이벤트
 inquiryButton.addEventListener('click', () => {
   if (selectedFeatures.length === 0) {
     alert('최소 하나 이상의 기능을 선택해주세요.');
     return;
   }
 
-  // 문의 페이지 URL 생성
+  // 문의 페이지 URL 생성 (해시 사용)
   const inquiryUrl = new URL('contact.html', window.location.origin);
-  inquiryUrl.searchParams.set('features', selectedFeatures.join(', '));
-  inquiryUrl.searchParams.set('totalPrice', totalPrice);
-
-  // 문의 페이지로 이동
-  window.location.href = inquiryUrl;
+  const hashData = `features=${encodeURIComponent(selectedFeatures.join(', '))}&totalPrice=${totalPrice}`;
+  window.location.href = `${inquiryUrl}#${hashData}`;
 });
