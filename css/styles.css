@@ -326,6 +326,15 @@ button:hover {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 아래 그림자 */
 }
 
+.header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px; /* 중앙 정렬 */
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
 .logo a {
   font-size: 1.5rem;
   font-weight: bold;
@@ -350,6 +359,8 @@ button:hover {
   text-decoration: none;
   color: black;
   font-weight: bold;
+  padding: 5px 10px;
+  white-space: nowrap; /* 텍스트 줄바꿈 방지 */
 }
 
 .nav-list li a:hover {
@@ -364,6 +375,7 @@ button:hover {
   background: none;
   border: none;
   cursor: pointer;
+  position: relative;
 }
 
 .hamburger span {
@@ -396,37 +408,11 @@ button:hover {
     text-align: left; /* 왼쪽 정렬 */
     padding: 10px 15px; /* 텍스트가 잘리지 않도록 패딩 추가 */
   }
-}
 
-.nav-list li a {
-  text-decoration: none;
-  color: black;
-  font-weight: bold;
-  padding: 5px 10px; /* 여백 추가 */
-  white-space: nowrap; /* 텍스트 줄바꿈 방지 */
+  .hamburger {
+    display: flex; /* 햄버거 버튼 활성화 */
+    position: absolute;
+    right: 20px;
+    top: 20px;
+  }
 }
-
-.nav-list li a:hover {
-  color: #007bff;
-}
-
-.hamburger {
-  display: none; /* 기본적으로 숨김 */
-  flex-direction: column;
-  gap: 5px;
-  background: none;
-  border: none;
-  cursor: pointer;
-  position: absolute; /* 오른쪽 고정 */
-  right: 20px; /* 오른쪽 끝에서 약간의 여백 */
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-.hamburger span {
-  display: block;
-  width: 25px;
-  height: 3px;
-  background: black;
-}
-
