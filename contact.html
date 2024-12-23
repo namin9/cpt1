@@ -79,7 +79,6 @@
             <label for="message">문의 내용</label>
             <textarea id="message" name="message" placeholder="문의 내용을 입력하세요" rows="5" required></textarea>
           </div>
-        
           <button type="submit">문의하기</button>
         </form>
         <div id="success-popup" class="popup">
@@ -127,6 +126,21 @@
       const popup = document.getElementById('success-popup');
       popup.style.display = 'none'; // 팝업 숨기기
     });
+    // URL에서 파라미터 읽기
+const urlParams = new URLSearchParams(window.location.search);
+const features = urlParams.get('features');
+const totalPrice = urlParams.get('totalPrice');
+
+// 폼 요소에 데이터 삽입
+if (features && totalPrice) {
+  const messageField = document.getElementById('message');
+  const defaultMessage = `
+    도입 문의 정보:
+    선택된 기능: ${features}
+    예상 총 요금: ${totalPrice}원
+  `;
+  messageField.value = defaultMessage.trim();
+}
   </script>
   <script src="js/price.js"></script>
   <script src="js/mscript.js"></script>
