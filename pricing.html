@@ -86,28 +86,29 @@
 
     <!-- 커스텀 요금제 섹션 -->
     <section id="custom-pricing">
-      <h2>커스텀 요금제</h2>
-      <p>필요한 기능만 선택하여 맞춤형 요금제를 구성해 보세요.</p>
-      <form id="custom-form">
-        <label>
-          <input type="checkbox" class="feature-checkbox" data-price="150000">
-          모니터링
-        </label>
-        <label>
-          <input type="checkbox" class="feature-checkbox" data-price="100000">
-          알림
-        </label>
-        <label>
-          <input type="checkbox" class="feature-checkbox" data-price="800000">
-          월간 보고서
-        </label>
-        <label>
-          <input type="checkbox" class="feature-checkbox" data-price="500000">
-          데이터 분석
-        </label>
-        <p><strong>예상 총 요금: </strong><span id="total-price">0</span>원</p>
-      </form>
-    </section>
+  <h2>커스텀 요금제</h2>
+  <p>필요한 기능만 선택하여 맞춤형 요금제를 구성해 보세요.</p>
+  <form id="custom-form">
+    <label>
+      <input type="checkbox" class="feature-checkbox" data-price="150000" data-name="모니터링">
+      모니터링
+    </label>
+    <label>
+      <input type="checkbox" class="feature-checkbox" data-price="100000" data-name="알림">
+      알림
+    </label>
+    <label>
+      <input type="checkbox" class="feature-checkbox" data-price="800000" data-name="월간 보고서">
+      월간 보고서
+    </label>
+    <label>
+      <input type="checkbox" class="feature-checkbox" data-price="500000" data-name="데이터 분석">
+      데이터 분석
+    </label>
+    <p><strong>예상 총 요금: </strong><span id="total-price">0</span>원</p>
+    <button type="button" id="inquiry-button" class="btn">도입 문의</button>
+  </form>
+      </section>>
   </main>
 </body>
 <script src="js/price.js"></script>
