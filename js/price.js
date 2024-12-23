@@ -30,7 +30,7 @@ inquiryButton.addEventListener('click', () => {
   }
 
   // 문의 페이지 URL 생성 (해시 사용)
-  const inquiryUrl = new URL('contact.html', window.location.origin);
+  const inquiryUrl = new URL('cpt1/contact', window.location.origin);
   const hashData = `features=${encodeURIComponent(selectedFeatures.join(', '))}&totalPrice=${totalPrice}`;
   window.location.href = `${inquiryUrl}#${hashData}`;
 });
