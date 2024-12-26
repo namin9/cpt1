@@ -5,11 +5,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const features = params.get('features');
   const totalPrice = params.get('totalPrice');
+  const fromPricing = params.get('source'); // 'source'가 'pricing'인지 확인
 
   // 문의 종류에서 "도입 문의"를 자동 선택
   const inquiryTypeField = document.getElementById('inquiry-type');
   if (inquiryTypeField) {
-    inquiryTypeField.value = '도입 문의'; // "도입 문의" 옵션 선택
+    // 해시에 'source=pricing'이 포함된 경우만 "도입 문의"로 설정
+    if (fromPricing === 'pricing') {
+      inquiryTypeField.value = '도입 문의';
+    } else {
+      inquiryTypeField.value = ''; // 기본 값으로 설정
+    }
   }
 
   // 문의 내용 자동 입력
