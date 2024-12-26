@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // 문의 내용 자동 입력
   if (features && totalPrice) {
     const messageField = document.getElementById('message');
-    const defaultMessage = `도입 문의\n선택된 기능: ${features}\n예상 총 요금: ${totalPrice}원\n문의 내용:`;
+    const defaultMessage = `선택된 기능: ${features}\n예상 총 요금: ${totalPrice}원\n문의 내용:`;
     messageField.value = defaultMessage.trim(); // 불필요한 줄바꿈 및 공백 제거
   }
 });
