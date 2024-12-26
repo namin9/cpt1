@@ -141,7 +141,7 @@ section {
 }
 
 .card img {
-  max-width: 100%; /* 이미지 크기 조정 */
+  max-width: 86px; /* 이미지 크기 조정 */
   height: auto;
   margin-bottom: 15px;
 }
