@@ -135,6 +135,14 @@ section {
   text-align: center;
   transition: transform 0.3s ease; /* 카드 호버 시 애니메이션 추가 */
 }
+.testimonial {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s ease; /* 카드 호버 시 애니메이션 추가 */
+}
 
 .card:hover {
   transform: translateY(-5px); /* 호버 시 위로 살짝 올라감 */
@@ -372,6 +380,7 @@ button:hover {
 #features {
   background: #f8f9fa;
   color: #333;
+  text-align: center;
 }
 #hero .btn-primary {
   background-color: #007bff;
