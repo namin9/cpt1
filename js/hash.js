@@ -10,9 +10,10 @@ document.addEventListener('DOMContentLoaded', () => {
   // 문의 종류에서 "도입 문의"를 자동 선택
   const inquiryTypeField = document.getElementById('inquiry-type');
   if (inquiryTypeField) {
-    // 해시에 'source=pricing'이 포함된 경우만 "도입 문의"로 설정
     if (fromPricing === 'pricing') {
       inquiryTypeField.value = '도입 문의';
+    } if (fromPricing === 'service') {
+      inquiryTypeField.value = '서비스 소개서 요청';
     } else {
       inquiryTypeField.value = ''; // 기본 값으로 설정
     }
