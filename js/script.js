@@ -48,8 +48,9 @@ document.querySelectorAll('.faq-item h3').forEach(faq => {
   });
 });
 
-
 const Button = document.getElementById('btn btn-secondary');
+
+Button.addEventListener('click', () => {
 
   // URL 생성 (해시 사용)
   const inquiryUrl = new URL('cpt1/contact', window.location.origin);
