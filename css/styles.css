@@ -115,7 +115,6 @@ section {
 
   .hamburger {
     display: flex; /* 모바일에서 햄버거 버튼 활성화 */
-    position: absolute;
     top: 15px;
     right: 20px;
   }
