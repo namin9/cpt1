@@ -187,6 +187,9 @@ section {
   gap: 20px;
   padding: 20px;
 }
+.testimonial hover {
+  transform: translateY(-5px); /* 호버 시 위로 살짝 올라감 */
+}
 .testimonial {
   max-width: 300px;
   padding: 20px;
