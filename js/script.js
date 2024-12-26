@@ -47,3 +47,12 @@ document.querySelectorAll('.faq-item h3').forEach(faq => {
     answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
   });
 });
+
+
+const Button = document.getElementById('btn btn-secondary');
+
+  // URL 생성 (해시 사용)
+  const inquiryUrl = new URL('cpt1/contact', window.location.origin);
+  const hashData = `source=service`;
+  window.location.href = `${inquiryUrl}#${hashData}`;
+});
