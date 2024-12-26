@@ -58,6 +58,7 @@ section {
   display: flex;
   margin: 0;
   padding: 0;
+  justify-content: center;
 }
 
 .nav-list li a {
